@@ -3,8 +3,14 @@ defmodule Colorize do
   @reset @escape <> "0m"
 
   @colors %{
+    :black => "30",
     :red => "31",
-    :green => "32"
+    :green => "32",
+    :yellow => "33",
+    :blue => "34",
+    :purple => "35",
+    :cyan => "36",
+    :white => "37"
   }
 
   @colors |> Map.keys |> Enum.map fn color ->
