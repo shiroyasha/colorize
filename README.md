@@ -4,7 +4,7 @@
 
 Colorize your text in the console.
 
-![Colorize logo](https://raw.githubusercontent.com/shiroyasha/gravatarify/master/logo.png)
+![Colorize logo](https://raw.githubusercontent.com/shiroyasha/colorize/master/logo.png)
 
 
 ## Installation
