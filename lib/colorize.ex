@@ -1,27 +1,22 @@
 defmodule Colorize do
-  @escape "\e["
-  @reset @escape <> "0m"
+  @colors [
+    :black,
+    :red,
+    :green,
+    :yellow,
+    :blue,
+    :magenta,
+    :cyan,
+    :white
+  ]
 
-  @colors %{
-    :black => "30",
-    :red => "31",
-    :green => "32",
-    :yellow => "33",
-    :blue => "34",
-    :purple => "35",
-    :cyan => "36",
-    :white => "37"
-  }
-
-  @colors |> Map.keys |> Enum.map fn color ->
+  @colors |> Enum.map fn color ->
     def unquote(color)(string) do
-      {:ok, color_code} = Map.fetch(@colors, unquote(color))
-
-      colorized(string, color_code)
+      colorized(string, unquote(color))
     end
   end
 
-  defp colorized(string, color_code) do
-    @escape <> color_code <> "m" <> string <> @reset
+  defp colorized(string, color) do
+    IO.ANSI.format([color, string], true) |> IO.chardata_to_string()
   end
 end
