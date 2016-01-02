@@ -3,7 +3,7 @@ defmodule Colorize.Mixfile do
 
   def project do
     [app: :colorize,
-     version: "0.1.0",
+     version: "0.2.0",
      description: "Colorize your text in the console",
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
