@@ -1,0 +1,25 @@
+version: "v3.0"
+name: Basic, 3 blocks YAML file example. Only first 2 blocks will be executed because second block will fail.
+semaphore_image: standard
+blocks:
+  - build:
+      jobs:
+        - name: Job from 1st block
+          commands:
+            - echo $SEMAPHORE_PIPELINE_ID
+        - name: 2nd job from 1st block
+          commands:
+            - echo This is from second job
+  - build:
+      jobs:
+        - name: Job from 2nd block
+          commands:
+            - echo $SEMAPHORE_PIPELINE_ID
+            - "false"
+            - echo bar2
+  - build:
+      jobs:
+        - name: Job from 3rd block
+          commands:
+            - echo foo3
+            - echo bar3
