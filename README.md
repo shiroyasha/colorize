@@ -2,7 +2,7 @@
 
 [![Build Status](https://semaphoreci.com/api/v1/projects/248fb1bb-d7ec-42c4-8c49-4c55d6367929/646975/badge.svg)](https://semaphoreci.com/shiroyasha/colorize)
 
-Colorize your text in the console. ABC
+Colorize your text in the console. AB
 
 ![Colorize logo](https://raw.githubusercontent.com/shiroyasha/colorize/master/logo.png)
 
