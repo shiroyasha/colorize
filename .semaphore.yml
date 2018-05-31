@@ -1,4 +1,4 @@
-version: "v3.0"
+version: "v4.0"
 name: Basic, 3 blocks YAML file example. Only first 2 blocks will be executed because second block will fail.
 semaphore_image: standard
 blocks:
