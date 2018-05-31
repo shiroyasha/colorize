@@ -2,8 +2,8 @@ version: "v3.0"
 name: Basic, 3 blocks YAML file example. Only first 2 blocks will be executed because second block will fail.
 semaphore_image: standard
 blocks:
-  - build:
-      name: "Stage A"
+  - name: "Stage A"
+    build:
       jobs:
         - name: Job from 1st block
           commands:
@@ -12,8 +12,8 @@ blocks:
           commands:
             - echo This is from second job
   
-  - build:
-      name: "Stage B"
+  - name: "Stage B"
+    build:
       jobs:
         - name: Job from 2nd block
           commands:
@@ -21,8 +21,8 @@ blocks:
             - "false"
             - echo bar2
             
-  - build:
-      name: "Over 9000"
+  - name: "Over 9000"
+    build:
       jobs:
         - name: Job from 3rd block
           commands:
